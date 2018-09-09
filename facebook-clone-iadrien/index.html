@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title="CSE 104 - Assignment 09 Facebook Clone Adrien">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+</head>
+<body style="background-color:#e9ebee">
+
+<!--DIV for all-->
+<div id="pre">
+  <div id="outblueBar">
+    <div id="centerBar">
+      <div id="left">
+        <div id="fbLogo">
+          <div style="margin: 7px 0;margin-left: -2px;m argin-right: 5px;">
+            <i id="LOGO"></i>
+          </div>
+        </div>
+        <div id="fbSearchBar">
+          <div id="searchContainer">
+            <form action="/search/web/direct_search.php" method="get">
+              <button id="searchButton">
+              <i id="searchIcon"></i></button>
+              <div id="searchContent">Blark Monway</div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="right">
+        <div id="home">
+          <div id="myPage">
+            <div style="margin: 7px 0 8px 0;">
+              <a id="myPageId" accesskey="2" data-gt="{&quot;chrome_nav_item&quot;:&quot;timeline_chrome&quot;}" href="https://www.facebook.com/icalcifer" title="Profile" data-testid="blue_bar_profile_link"><img id="myProfilePic" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/c3.0.40.40/p40x40/10271475_505204762939002_8882003577923187328_n.jpg?oh=95eef98435c5ab9734e3ab3579d0788e&amp;oe=58CA5EA7"><span>Zuoting</span></a>
+            </div>
+          </div>
+          <div class="lineSector"></div>
+          <div id="myHome">
+            <div style="margin: 7px 0 8px 0">
+              <a id="homePage">Home</a>
+            </div>
+          </div>
+        </div>
+        <div id="application">
+          <div class="app">
+            <div class="appContainer">
+              <div id="friendRequest"></div>
+            </div>
+          </div>
+          <div class="app">
+            <div class="appContainer">
+              <div id="message"></div>
+            </div>
+          </div>
+          <div class="app">
+            <div class="appContainer">
+              <div id="notification"></div>
+            </div>
+          </div>
+        </div>
+        <div class="lineSector"></div>
+        <div id="safety">
+          <div class="container">
+            <div style="margin: 7px 0 10px;margin-left: 7px;">
+              <div id="lock"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div style="margin: 7px 0;margin-right: -7px;">
+              <div id="moreLock"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="body">
+  <div id="globalContainer">
+    <div id="rightControl">
+      <div id="ad">
+        <div class="sponsord"><span class="sponsor">Sponsored</span></div></br>
+        <img class="scaledImageFitWidth img" src="https://external-ord1-1.xx.fbcdn.net/safe_image.php?d=AQDBIwglTmY5bPD9&amp;w=284&amp;h=149&amp;url=http%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIGAw6ghpEa2ijETHAoXwLFFGDLNzJjgOSeiu9VRIFmVac5GcAiJfijfrzHpjnlSW0IXaMpEggp8SeIiqn7PG0dJEOR4LPOziO7Q3U0iHRstYfNwUxB--bUq8vsNi6-GMiCwj7v96s0TqQTCFgXSU--&amp;cfs=1" style="top:0px;" alt="" width="150" height="79">
+        <span class="adContent">Use Hootsuite's analytics to measure the success of your social media campaigns.</span>
+        </br>
+        </br>
+        <div class="sponsord"><span class="sponsor">Sponsored</span></div></br>
+        <img class="scaledImageFitWidth img" src="https://external-ord1-1.xx.fbcdn.net/safe_image.php?d=AQA6ABTQoxUCp8Wl&amp;w=284&amp;h=149&amp;url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQI4U5gjgA2wzYsOMP2Ky8Rk9DYRTfS56ienDyOZcBCk1bkr1tgOdrw73yrn6d2MMDKsFmZJWJKB6BVEIi-E2vZbeqQyBiW5RCWU4PflYRh0OiricKy6zEr_qbHVIS8VQTXNzF9iCXHA8xYBSW3auP-M&amp;cfs=1&amp;sx=2&amp;sy=0&amp;sw=1197&amp;sh=628" style="top:0px;" alt="" width="150" height="79">
+        <span class="adContent">Boxed delivers the bulk-sized products you love, at prices that work for you.</span>
+      </div>
+    </div>
+
+  <div style="width:851px">
+    <div id="main">
+      <div id="headerBase">
+      </div>
+      <div id="headerPlaceholder" style="display:none">
+      </div>
+      <div id="header">
+        <div id="cover">
+          <div id="coverPic">
+            <img id="markCover" src="markCover.jpg" width=100% alt="Cover Photo">
+            <div id="coverBackground">
+            </div>
+          </div>
+
+          <div id="nameContainer">
+            <span id="coverName">
+              Blark Monway
+              <span id="alias">
+                (SassMaster)
+              </span>
+            </span>
+          </div>
+        </div>
+
+        <div id="action">
+          <div id="actions">
+            <div id="friendButton">
+              <button id="fdButton" type="button">
+              </button>
+              <a id="buttonA" role="button">
+                <span id="buttonSpan" role="button">
+                  <i class="friended"></i>
+                  <span id="addFB">Friends
+                  </span><i id="friendMore"></i>
+                </span>
+              </a>
+            </div>
+            <div id="moreAction">
+              <button id="moreButton" type="button">
+              </button>
+              <a id="moreActions" role="button">
+                <i id="actionsMore"></i>
+                </span>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="barMenu">
+          <div id="menu">
+            <a id="timeLine">
+              Timeline
+              <span id="selectedTimeline"></span>
+            </a>
+            <a id="about">
+              About
+            </a>
+            <a id="friends">
+              Friends
+              <span id="mutual">46 Mutual</span>
+            </a>
+            <a id="photos">
+              Photos
+            </a>
+            <a id="more">
+              More
+              <i id="moreInfo"></i>
+            </a>
+          </div>
+        </div>
+
+        <div id="photoContainer">
+          <a id="profilePic" rel="theatre">
+            <img src="mark.jpg" alt="Profile Photo" id="markProfile">
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div>
+      <div id="body2">
+        <div id="activity">
+          <li id="postContainer">
+            <div id="post">
+              <div id="postTop">
+                <div id="postblock">
+                  <a role="tab" href="#">
+                    <i id="postIcon" alt=""></i>
+                    <span id="postTab">Post</span>
+                    <span id="selected"></span>
+                  </a>
+                  <div id="pvDiv">
+                    <i id="pvIcon" alt=""></i>
+                    <span id="pv">Photo/Video</span>
+                  </div>
+                </div>
+              </div>
+              <div id="postBody">
+                <div id="postContent" >
+                  <div id="head">
+                    <div id="myHead">
+                      <img src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/c4.0.60.60/p60x60/10271475_505204762939002_8882003577923187328_n.jpg?oh=e59acffb27c162681a317dcbcee20105&amp;oe=58896166" alt="" width="40" height="40">
+                    </div>
+                  </div>
+                  <div id="write">
+                    <div id="writeBox">
+                      <div id="preContent">
+                        <form id="fpostorm" method="post">
+                          <input id="postMark" type="text" name="post" value="Write something to Blark...">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="sector">
+                </div>
+                <div id="postOption">
+                  <div>
+                    <div id="leftOption">
+                      <div id="option1">
+                      </div>
+                      <div id="option2">
+                      </div>
+                      <div id="option3">
+                      </div>
+                      <div id="option4">
+                      </div>
+                      <div id="option5">
+                      </div>
+                    </div>
+                    <div id="rightSubmit">
+                      <div style="padding:8px">
+                        <div id="postSetting">
+                          <div id="pSettingIcon">
+                            <i id="gear"></i>
+                          </div>
+                        </div>
+                          <button id="postButton" type="submit" value="1" form="fpostorm"><span class="">Post</span></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <ol id="OLpost">
+            <div class="postGroup">
+              <div class="recentPost">
+                <div class="postShare" style="height:457px">
+                  <div class="postDropDown">
+                    <div class="dropDownIcon">
+                      <i id="dropDownIconPic"></i>
+                    </div>
+                  </div>
+                  <div class="postInfo">
+                    <div class="postInfoHead">
+                      <img class="postInfoProfile" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/c13.29.75.75/p100x100/14909900_10211127287122782_8751108414354043526_n.jpg?oh=740d4cca6b15713122731fce93c5ca0e&amp;oe=588E7081" alt="">
+                    </div>
+                    <div class="postInformation">
+                      <p class="peopleInvolved">
+                        <span class="hlinkP">Kendra Keyes
+                          <span class="regular">with</span>
+                          <span style="font-weight:normal">Blark Monway</span>
+                        </span>
+                      </p>
+                      <p class="dateTime">
+                        September 14 · <i id="sharedWith"></i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="postContentContainer">
+                    <a class="pic" href="https://www.facebook.com/photo.php?fbid=10210622741829465&amp;set=a.10210615740134427.1073741848.1374987739&amp;type=3" rel="theater" ajaxify="https://www.facebook.com/photo.php?fbid=10210622741829465&amp;set=a.10210615740134427.1073741848.1374987739&amp;type=3&amp;size=750%2C1334&amp;player_origin=profile" data-render-location="timeline" style="width:221px;" data-testid="theater_link"><div class="uiScaledImageContainer _4-ep" style="width:221px;height:394px;" id="u_jsonp_4_j"><img class="scaledImageFitWidth img" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-0/s600x600/14355158_10210622741829465_1840581858801057979_n.jpg?oh=b57418a9e64533f627752f6dd1eb71aa&amp;oe=58D25FE2" alt="Image may contain: dog" width="221" height="395"></div></a>
+                  </div>
+                </div>
+                <div class="commentSection">
+                  <form class="commentForm" style="padding:0;margin:0;">
+                    <div class="commentTop">
+                      <div class="likeButton">
+                        <i class="thumb"></i>Like
+                      </div>
+                      <div class="commentButton">
+                        <i class="commentWindow"></i>Comment
+                      </div>
+                      <div class="shareButton">
+                        <i class="share"></i>Share
+                      </div>
+                    </div>
+                    <div class="commentSector">
+                    </div>
+                    <div class="response">
+                      <div class="numLikes">
+                        <div class="likedContainer">
+                          <i class="liked"></i>
+                        </div>
+                        <div class="likedContainer">
+                          1</div>
+                      </div>
+                      <div style="position:relative">
+                      </div>
+                      <div class="friendComment">
+
+                        <div style="height:100%">
+                          <div style="float:left;position:relative;top: 22px;left: -40px;">
+                          <img id="sylvia" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/p48x48/14359136_1117697468322813_1337823272872180886_n.jpg?oh=675927db9aea75ebd7851d55c765e5ba&oe=5893BB87">
+                        </div>
+                        <div>
+                          <span class="commentFonts">
+                            <span class="people">Natalya Donchenko</span> 10/10</span>
+                        </div>
+                      <div><span class="extraFonts"><span class="hyperLike">Like · Reply · </span>
+                        September 15 at 6:31pm
+                      </span>
+                      </div>
+                      </div>
+
+                      <div class="writeComment">
+                        <div>
+                          <div style="float:left">
+                          <img class="myID" alt="Zuoting Xie" class="img UFIActorImage _54ru img" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/c3.0.48.48/p48x48/10271475_505204762939002_8882003577923187328_n.jpg?oh=efae0e948961a23244103dfab3d9365d&amp;oe=58D247C1">
+                        </div>
+                          <div style="float:left;margin: 0;padding-left: 8px">
+                          <div class="inputComment">
+                            <span class="writeAComment">Write a comment...</span>
+                            <div class="emoji">
+                              <div class="photoComment">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+</ol>
+
+
+<ol id="OLpost2">
+  <div class="postGroup">
+    <div class="recentPost">
+      <div class="postShare" style="height:457px">
+        <div class="postDropDown">
+          <div class="dropDownIcon">
+            <i id="dropDownIconPic"></i>
+          </div>
+        </div>
+        <div class="postInfo">
+          <div class="postInfoHead">
+            <img class="postInfoProfile" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/c0.25.80.80/p80x80/12998615_10206456401906175_6514545562101918671_n.jpg?oh=8f40ba9b9bb6adf0b757b52a91e3a105&amp;oe=588711DF" alt="">          </div>
+          <div class="postInformation">
+            <p class="peopleInvolved">
+              <span class="hlinkP">Dana Wierzbicki
+                <span class="regular">with</span>
+                <span style="font-weight:normal">Blark Monway</span>
+              </span>
+            </p>
+            <p class="dateTime">
+              September 12 · <i id="sharedWith"></i>
+            </p>
+          </div>
+        </div>
+        <div class="postContentContainer">
+<img class="scaledImageFitHeight img" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-0/s600x600/14364686_10207423003590613_410434107656401099_n.jpg?oh=e7caec3e2a62f5c6389f312926609d4d&amp;oe=589323AE" style="left:0px;" alt="Image may contain: 1 person , cat and indoor" width="296" height="394">        </div>
+      </div>
+      <div class="commentSection">
+        <form class="commentForm" style="padding:0;margin:0;">
+          <div class="commentTop">
+            <div class="likeButton">
+              <i class="thumb"></i>Like
+            </div>
+            <div class="commentButton">
+              <i class="commentWindow"></i>Comment
+            </div>
+            <div class="shareButton">
+              <i class="share"></i>Share
+            </div>
+          </div>
+          <div class="commentSector">
+          </div>
+          <div class="response">
+            <div class="numLikes">
+              <div class="likedContainer">
+                <i class="liked"></i>
+              </div>
+              <div class="likedContainer">
+                4</div>
+            </div>
+            <div style="position:relative">
+            </div>
+            <div class="friendComment">
+
+              <div style="height:100%">
+                <div style="float:left;position:relative;top: 22px;left: -40px;">
+                <img id="sylvia" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/p48x48/14344075_10205247932396852_6793105157438999249_n.jpg?oh=adb0a8a64c38dec7eb03948564eb0c09&oe=58D01E2F">
+              </div>
+              <div>
+                <span class="commentFonts">
+                  <span class="people">Nick Macey</span> My son</span>
+              </div>
+            <div><span class="extraFonts"><span class="hyperLike">Like · Reply · </span>
+              September 12 at 7:59pm
+            </span>
+            </div>
+            </div>
+
+            <div class="writeComment">
+              <div>
+                <div style="float:left">
+                <img class="myID" alt="Zuoting Xie" class="img UFIActorImage _54ru img" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/c3.0.48.48/p48x48/10271475_505204762939002_8882003577923187328_n.jpg?oh=efae0e948961a23244103dfab3d9365d&amp;oe=58D247C1">
+              </div>
+                <div style="float:left;margin: 0;padding-left: 8px">
+                <div class="inputComment">
+                  <span class="writeAComment">Write a comment...</span>
+                  <div class="emoji">
+                    <div class="photoComment">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</ol>
+
+
+<ol id="OLpost3">
+  <div class="postGroup">
+    <div class="recentPost">
+      <div class="postShare" style="height:457px">
+        <div class="postDropDown">
+          <div class="dropDownIcon">
+            <i id="dropDownIconPic"></i>
+          </div>
+        </div>
+        <div class="postInfo">
+          <div class="postInfoHead">
+            <img class="postInfoProfile" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/c0.25.80.80/p80x80/12998615_10206456401906175_6514545562101918671_n.jpg?oh=8f40ba9b9bb6adf0b757b52a91e3a105&amp;oe=588711DF" alt="">          </div>
+          <div class="postInformation">
+            <p class="peopleInvolved">
+              <span class="hlinkP">Dana Wierzbicki
+                <span class="regular">with</span>
+                <span style="font-weight:normal">Blark Monway</span>
+              </span>
+            </p>
+            <p class="dateTime">
+              September 12 · <i id="sharedWith"></i>
+            </p>
+          </div>
+        </div>
+        <div class="postContentContainer">
+<img class="scaledImageFitHeight img" src="monway.jpg" style="left:0px;" alt="Image may contain: 1 person , cat and indoor" width="296" height="394">        </div>
+      </div>
+      <div class="commentSection">
+        <form class="commentForm" style="padding:0;margin:0;">
+          <div class="commentTop">
+            <div class="likeButton">
+              <i class="thumb"></i>Like
+            </div>
+            <div class="commentButton">
+              <i class="commentWindow"></i>Comment
+            </div>
+            <div class="shareButton">
+              <i class="share"></i>Share
+            </div>
+          </div>
+          <div class="commentSector">
+          </div>
+          <div class="response">
+            <div class="numLikes">
+              <div class="likedContainer">
+                <i class="liked"></i>
+              </div>
+              <div class="likedContainer">
+                4</div>
+            </div>
+            <div style="position:relative">
+            </div>
+            <div class="friendComment">
+
+              <div style="height:100%">
+                <div style="float:left;position:relative;top: 22px;left: -40px;">
+                <img id="sylvia" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/p48x48/14344075_10205247932396852_6793105157438999249_n.jpg?oh=adb0a8a64c38dec7eb03948564eb0c09&oe=58D01E2F">
+              </div>
+              <div>
+                <span class="commentFonts">
+                  <span class="people">Nick Macey</span> My Babes!!!</span>
+              </div>
+            <div><span class="extraFonts"><span class="hyperLike">Like · Reply · </span>
+              September 12 at 6:23pm
+            </span>
+            </div>
+            </div>
+
+            <div class="writeComment">
+              <div>
+                <div style="float:left">
+                <img class="myID" alt="Zuoting Xie" class="img UFIActorImage _54ru img" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/c3.0.48.48/p48x48/10271475_505204762939002_8882003577923187328_n.jpg?oh=efae0e948961a23244103dfab3d9365d&amp;oe=58D247C1">
+              </div>
+                <div style="float:left;margin: 0;padding-left: 8px">
+                <div class="inputComment">
+                  <span class="writeAComment">Write a comment...</span>
+                  <div class="emoji">
+                    <div class="photoComment">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</ol>
+
+
+        <div id="info">
+          <ol id="OLinfo">
+            <li class="infoList">
+              <div class="liDIV">
+                <div class="section">
+                  <i id="introIcon"></i>
+                  <div class="sectionII">
+                  <span class="sectionTitle">Intro</span>
+                </div>
+                </div>
+                <div class="content">
+                  <ul id="introUL">
+                  <li class="infoItem">
+                    <i id="introSub1"></i>
+                    <div class="itemDIV">
+                      <span class="items">Studied at
+                      <a class="profileLink" href="https://www.facebook.com/pages/Beloit-College/104124696290754?ref=br_rs">Beloit College</a></span>
+                    </div>
+                  </li>
+                  <li class="infoItem">
+                    <i id="introSub2"></i>
+                    <div class="itemDIV">
+                      <span class="items">Lives in
+                      <a class="profileLink" href="https://www.facebook.com/pages/Chicago-Illinois/108659242498155?ref=br_rs">Chicago, Illinois</a></span>
+                    </div>
+                  </li>
+                  <li class="infoItem">
+                    <i id="introSub3"></i>
+                    <div class="itemDIV">
+                      <span class="items">Followed by
+                      <a class="profileLink" href="https://www.facebook.com/mark.conway.14203/followers">8 people</a></span>
+                    </div>
+                  </li>
+                </ul>
+                </div>
+              </div>
+            </li>
+            <li class="infoList">
+              <div class="liDIV">
+                <div class="section">
+                  <i id="photoIcon"></i>
+                  <div class="sectionII">
+                  <span class="sectionTitle">Photos</span>
+                </div>
+                </div>
+                <div class="photoDisplay">
+                  <table class="photoTable">
+                    <body>
+                      <tr class="photoRow">
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-0/p228x119/14907077_1121072704674436_1700876518813323793_n.jpg?oh=6b7f6dae255231c002b9a80c42077e3f&amp;oe=589A2AD2" style="left:-20px;" alt="Edward Otto's photo." width="153" height="101">
+                          </div>
+                        </td>
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-0/s206x206/14364686_10207423003590613_410434107656401099_n.jpg?oh=8cdffc4381039e6dcac562cca256ab06&amp;oe=5887CEF4" style="top:-13px;" alt="Dana Wierzbicki's photo." width="101" height="136">
+                          </div>
+                        </td>
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-0/s280x280/14333771_10210622741869466_4276999265285387253_n.jpg?oh=c5de631a16672ca8251d48174be60fc9&amp;oe=58D06CB4" style="top:-4px;" alt="Kendra Keyes's photo." width="101" height="181">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="photoRow">
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-0/s206x206/13263726_677852922367369_7934614404356520089_n.jpg?oh=aebc4e950044897e6a3625753cf1b528&amp;oe=58881B6A" style="top:-13px;" alt="Tessa Sebastian's photo." width="101" height="136">
+                          </div>
+                        </td>
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-0/s280x280/13245275_677854209033907_7763528774494149558_n.jpg?oh=f8708adf40c7a2878986ac4f559c20f8&amp;oe=58D0A869" style="top:-6px;" alt="Tessa Sebastian's photo." width="101" height="181">
+                          </div>
+                        </td>
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-0/s280x280/1937131_10208997214632301_2035478945936893996_n.jpg?oh=0bd4e6fb719b1a398d71c3b2472d42e9&amp;oe=588E0F30" style="top:-47px;" alt="Kendra Keyes's photo." width="101" height="181">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="photoRow">
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-0/s206x206/10001495_10208997029427671_4784873865416471854_n.jpg?oh=93fb64fa5ae341d1d4e7119be6637312&amp;oe=588D1FA9" style="top:0px;" alt="Kendra Keyes's photo." width="101" height="136">
+                          </div>
+                        </td>
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-0/s206x206/10985301_10208997029467672_8327431517128415577_n.jpg?oh=f66eff4c62f9850d06cd1b6959a58f6a&amp;oe=5892C0EB" style="top:0px;" alt="Kendra Keyes's photo." width="101" height="136">
+                          </div>
+                        </td>
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-0/p160x160/12705505_851439718299524_3151443951200826965_n.jpg?oh=7388f21e155e4784c0f42c36514d1976&amp;oe=58CD902C" alt="Greta Taylor's photo." width="101" height="101">
+                          </div>
+                        </td>
+                      </tr>
+                    </body>
+                  </table>
+                </div>
+              </div>
+            </li>
+            <li class="infoList">
+              <div class="liDIV">
+                <div class="section">
+                  <i id="friendIcon"></i>
+                  <div class="sectionII">
+                  <span class="sectionTitle">Friends</span>
+                </div>
+                </div>
+                <div class="photoDisplay">
+                  <table class="photoTable">
+                    <body>
+                      <tr class="photoRow">
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img class="friendPicture" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/p160x160/14485057_10207316777898708_1662285315733773011_n.jpg?oh=a1d872a304b4c3ff0a905c17e204a188&amp;oe=58C9CF2F" alt="">
+                            <div class="friendName">
+                              Bellande Billy Bertrand II
+                            </div>
+                          </div>
+                        </td>
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img class="friendPicture" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/p160x160/14937262_10205769524517295_1049121786010150705_n.jpg?oh=67a747421b7908e851306ccdea44e508&amp;oe=58C81575" alt="">
+                            <div class="friendName">
+                              Nadir Carlson
+                            </div>
+                          </div>
+                        </td>
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img class="friendPicture" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/p160x160/14671190_10211160787804344_4086337613662627364_n.jpg?oh=08691f1bd6eac8486684c1c37bbb1e2d&amp;oe=589190FB" alt="">
+                            <div class="friendName">
+                              Sara Guttman
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="photoRow">
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img class="friendPicture" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/p160x160/14910427_10154027571949499_3668608345343341798_n.jpg?oh=1d4e519b318ee42d386fd5444f689b58&amp;oe=588EDCFC" alt="">
+                            <div class="friendName">
+                              Caroline Paxton
+                            </div>
+                          </div>
+                        </td>
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img class="friendPicture" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/p160x160/10429232_870440786349785_3600100977656778347_n.jpg?oh=e2673e6778a19fedfbba0ef20c946dd0&amp;oe=58C28868" alt="">
+                            <div class="friendName">
+                              Russell Hall
+                            </div>
+                          </div>
+                        </td>
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img class="friendPicture" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/p160x160/1450906_10208669403992310_560454765128031439_n.jpg?oh=67cb97c0117b1ae80e52407dc6fd92c5&amp;oe=58CA9133" alt="">
+                            <div class="friendName">
+                              Angelica Estevez
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="photoRow">
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img class="friendPicture" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/p160x160/13417414_10206661772759077_1209615368969492663_n.jpg?oh=438259b78a5e7e944c940b4b0685ef3b&amp;oe=588F95F7" alt="">
+                            <div class="friendName">
+                              Moctezuma Teight
+                            </div>
+                          </div>
+                        </td>
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img class="friendPicture" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/c0.0.160.160/p160x160/14925226_1118385748199319_4409393305232179521_n.jpg?oh=66ad84f98f2bc5bf1363417e81bb2fbf&amp;oe=58D5AFFF" alt="">
+                            <div class="friendName">
+                              Rebecca Taylor
+                            </div>
+                          </div>
+                        </td>
+                        <td class="photoThumbnail">
+                          <div class="thumbnail">
+                            <img class="friendPicture" src="https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-1/p160x160/14681585_10210861652683660_7502465525959085071_n.jpg?oh=dbd37b9fc86e703d45efdb704c06ad04&amp;oe=588D5DEF" alt="">
+                            <div class="friendName">
+                              Xavier Ward
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </body>
+                  </table>
+                </div>
+              </div>
+            </li>
+            <div id="language">
+              <div id="languages">
+                <div id="choseLan">
+                  <span id="chosenLan">English (US)</span>
+                  <span class="lanOptions"> · </span>
+                  <a class="lanOption">中文(简体)</a>
+                  <span class="lanOptions"> · </span>
+                  <a class="lanOption">Français (France)</a>
+                  <span class="lanOptions"> · </span>
+                  <a class="lanOption">Español</a>
+                </div>
+                <div id="addLan">
+                  <a id="addLanButton" role="button" href="#">
+                    <i id="addLanButtonImg">
+                    </i>
+                  </a>
+                </div>
+              </div>
+              <div id="terms">
+                <div id="termItems">
+                  <span id="chosenLan">Privacy</span>
+                  <span class="lanOptions"> · </span>
+                  <a class="lanOption">Terms</a>
+                  <span class="lanOptions"> · </span>
+                  <a class="lanOption">Advertising</a>
+                  <span class="lanOptions"> · </span>
+                  <a class="lanOption">Ad Choices<i id="adChoice"></i></a>
+                  <span class="lanOptions"> · </span>
+                  <a class="lanOption">Cookies</a>
+                  <span class="lanOptions"> · </span>
+                  <a class="lanOption">More<i id="moreChoice"></i></a>
+                </div>
+                <div id="company">
+                  <span>Facebook © 2016</span>
+                </div>
+              </div>
+            </div>
+          </ol>
+        </div>
+      </div>
+    </body>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

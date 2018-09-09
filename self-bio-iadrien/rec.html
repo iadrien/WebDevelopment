@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Recs For Hedi</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- jquery 3.1.1 (a dependency for the bootstrap javascript-->
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--api: 5434229a2fdefdcd73018b51a3215d22ebac690e250c14969b92aa4c413aeccd -->
+</head>
+<div id=rcontainer style="width:400px;margin: auto; align:center">
+  <h1>Random Thoughs from Diary Viewers</h1>
+  <h2>Write Your Thoughts</h2>
+  <h5>Or <a href="index.html">Back to Diary</a></h5>
+</div>
+<div id=rcontainer style="width:400px;margin: auto">
+  <form id="sendreview"  method="post" enctype="text/plain">
+    <div class="form-group">
+      <label for="name"><h3>Name:</h3></label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" style="margin-top:10px">
+    </div>
+    <div class="form-group">
+      <lable for="review"><h3>Thoughts:</h3></label>
+        <input type="text" class="form-control" id="review" name="review" placeholder="Review Here" style="margin-top:20px;height=40px">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<div id=rcontainer style="width:400px;margin: auto; align:center">
+<div>
+     <h2>Thoughts by others:</h2>
+     <div>
+     <ul id="reviews-list" style="padding-left:16px;padding-right:16px;">
+        <p id="content"></p>
+     </ul>
+   </div>
+ </div>
+ </div>
+<script src="javascript.js"></script>
+</body>
+
+
+</html>

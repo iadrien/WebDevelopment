@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+  <head>
+    <!-- Include normalize.css from CDN to provide some very basic default styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" integrity="sha256-K3Njjl2oe0gjRteXwX01fQD5fkk9JFFBdUHy/h38ggY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="utf-8">
+    <meta name="description" content="City Guide for Vilnius">
+    <meta name="keywords" content="Tourism,Vilnius,Lithuania,Guide">
+    <meta name="author" content="Adrien Xie">
+    <title>CSE 104 - Assignment 04 City Guide of Vilnius</title>
+  </head>
+
+  <body>
+    <!-- Floating Menu -->
+    <div id="menu">
+      <div height:10px>
+      </div>
+      <!-- there are many individual div that has a unique value to its height and width,
+      therefore i think it would be better just to define them in the html as if I define
+      only the height and width in css for each different div, the css will be occupied with
+      numerous unnecessary div definitions-->
+      <div height=20px; width=100% align="center">
+
+
+        <div class="subMenu">
+          <!-- Language form that should be further implimented with javascript
+          so that, instead of a submit button, as soon as an option is selected,
+          the website will be redirected to the desired site -->
+          <form name="Language">
+            <select name="Language">
+              <option value="EN" selected>EN</option>
+              <option value="LT">LT</option>
+              <option value="DE">DE</option>
+              <option value="FR">FR</option>
+            </select>
+          </form>
+        </div>
+
+        <div class="subMenu">
+          <a href="http://www.vilnius-tourism.lt/en/media/">Media</a>
+        </div>
+        <div class="subMenu">
+        <a href="http://www.vilnius-tourism.lt/en/information/vilniaus-turizmo-informacijos-centrai/">Partner</a>
+        </div>
+        <div class="subMenu">
+          <a href="http://www.vilnius-tourism.lt/en/">Tourism</a>
+        </div>
+        <div class="subMenu">
+          <form name="search" action="search.php">
+            <input type="text" name="search">
+          </form>
+      </div>
+        <div><span id="pagetitle">City Guide of Vilnius</span>
+        </div>
+      </div>
+
+      <!-- Naviagation-->
+      <div class="logo" align="center" >
+        <h1><img src="logo.jpg" width="120" height = "120" alt="Logo Pic"></h1>
+      </div>
+      <div class="option" align="center">
+        <div class="optionDiv">
+          <h1 class="menu">
+            <a class="inpage" href="#places">WHAT TO DO</a>
+          </h1>
+        </div>
+      </div>
+      <div class="option" align="center">
+        <div class="optionDiv">
+          <h1 class="menu">
+            <a class="inpage" href="#theatre">WHAT TO SEE</a>
+          </h1>
+        </div>
+      </div>
+      <div class="option" align="center">
+        <div class="optionDiv">
+          <h1 class="menu">
+            <span title="Under Construction: Comming soon">MORE INFO</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!--Body content-->
+    <!--Head pictures-->
+    <div id="welcome" align="center">
+      ~
+      <p>Welcome</p>
+      ~
+      <p>laukiamas</p>
+      ~
+      <p>добро пожаловать</p>
+    </div>
+    <div class="outermost" align = "cetner">
+      <img src="vilnius.png" width=100% alt="Old Town Vilnius Pic" >
+    </div>
+
+
+    <!--about the infor for the theatre-->
+    <div class="outermost">
+
+      <div id="theatre" align="center">
+        <h1> Vilnius Theatre
+        </h1>
+      </div>
+      <div id="theatreinfo">
+        <div class="theatre">
+          <div class="tTime" align="center">
+            10/13
+          </div>
+          <div class="tPic">
+            <dl>
+              <dt>The Opera 1 by Vilnius Opera</dt>
+                <dd> 7:00 pm at the Loyal Theatre</dd>
+                <dd> ticket price: 150 litas</dd>
+              </dl>
+          </div>
+        </div>
+        <div class="theatre">
+          <div class="tTime" align="center">
+            10/22
+          </div>
+          <div class="tPic">
+            <dl>
+              <dt>Little Merman
+                <dd> 9:30 pm at the Old Town Platz</dd>
+                  <dd>free to the public</dd>
+                  </dl>
+          </div>
+        </div>
+        <div class="theatre">
+          <div class="tTime" align="center">
+            11/02
+          </div>
+          <div class="tPic">
+            <dl>
+              <dt>The lake of ducks</dt>
+                <dd> 4:30 pm at the National Theatre</dd>
+                <dd> Ticket price: 400 litas - 2000 litas</dd>
+              </dl>
+          </div>
+        </div>
+      </div>
+      <div >
+        <div class="tTheatre">
+          <img src="theatre1.png" width="100%" height="320" alt="Theatre Pic">
+        </div>
+        <div class="tTheatre">
+          <img src="theatre2.png" width="100%" height="320" alt="Theatre Pic">
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
+
+    <!--other theatres-->
+    <div class="outermost">
+      <div id="calendar" align="center">
+          <a href="http://www.teatras.lt/en/calendar/" >...</a>
+      </div>
+      <div align = "center">
+        <br>
+        <h2>Other Theatre</h2>
+      </div>
+      <div class="externaltheatre">
+
+        <div class="linkTheatre" align="center">
+          <a href="http://www.opera.lt/en">National Opera &amp Ballet</a>
+        </div>
+        <div class="linkTheatre" align="center">
+          <a href="http://www.rusudrama.lt/">Rusu Dramos Teatras</a>
+        </div>
+        <div class="linkTheatre" align="center">
+          <a href="http://www.forumcinemas.lt/">Forum Cinemas Vingis</a>
+        </div>
+        <div class="linkTheatre" align="center">
+          <a href="http://www.teatraslele.lt/lt/titulinis">Vilniaus Teatras LeLe</a>
+        </div>
+      </div>
+
+
+      <!-- info for attractions will need javascrip or flash for click and show function-->
+      <div class="outermost">
+        <div style="height:10px">
+        </div>
+        <div id="places" align="center">
+          <h1> Vilnius Attractions
+          </h1>
+        </div>
+        <div class="place">
+          <dl class="dl">
+            <dt><a href="https://en.wikipedia.org/wiki/Gediminas%27_Tower">Gediminas' Tower</a></dt>
+            <dd>Castle, museum, history, architecture</dd>
+            <dd>Hours: 9:00 am-3:00pm Weekdays Closed on Saturday and Sunday</dd>
+            <dt><a href="https://en.wikipedia.org/wiki/Gate_of_Dawn">Gate of Dawn</a></dt>
+            <dd>Chapel</dd>
+            <dd>Hours: 9:00 am-5:30pm Weekdays 6:00am-2:00pm Saturday Closed Sunday</dd>
+            <dt><a href="https://en.wikipedia.org/wiki/Museum_of_Genocide_Victims">Museum of Genocide Victims</a></dt>
+            <dd>Museum</dd>
+            <dd>Hours: 9:00 am-5:00pm Weekdays Closed on Weekends</dd>
+            <dt><a href="https://en.wikipedia.org/wiki/Church_of_St._Anne,_Vilnius">Church of St.Anne, Vilnius</a></dt>
+            <dd>Gothic, 16th-century Catholic church</dd>
+            <dd>Hours: 9:00 am-5:30pm Weekdays 6:00am-2:00pm Saturday Closed Sunday</dd>
+            <dt><a href="https://en.wikipedia.org/wiki/Palace_of_the_Grand_Dukes_of_Lithuania">Palace of the Grand Dukes of Lithuania</a></dt>
+            <dd>Palace, history</dd>
+            <dd>Hours: 11:00 am-4:00pm Weekdays 11:00am-2:00pm Saturday and Sunday</dd>
+          </dl>
+        </div>
+        <div>
+          <div class="linkplace">
+            <img src="city.jpg" width="100%" height="320" alt="Theatre Pic">
+          </div>
+          <div class="linkplace">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d147553.954248897!2d25.11285048472618!3d54.700288589384925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd93fb5c6408f5%3A0x400d18c70e9dc40!2sVilnius%2C+Lithuania!5e0!3m2!1sen!2sus!4v1475122606261" width="100%" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div>
+  </div>
+    <!--table for contact info, mission statement-->
+    <div class="outermost">
+      <table id="tb">
+        <tr>
+          <th>Address</th>
+          <th>Contact</th>
+          <th>About the Website</th>
+        </tr>
+        <tr>
+          <td>Vilniaus g. 22,
+            <br>Vilnius, Lithuania</td>
+          <td>Tel: +370 5 262 9660
+          <br><a href="mailto:tic@vilnius.lt">Email: <span>tic@vilnius.lt</span></a></td>
+          <td class="statement">We provide travel information for tourists
+            <br> who are interested in visiting Lithuania</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

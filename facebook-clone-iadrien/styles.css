@@ -1,0 +1,1687 @@
+#outblueBar{
+  position:fixed;
+  top: 0px;
+  left:0px;
+  right:0px;
+  height:42px;
+  width:100%;
+  background-color: #3b5998;
+  display: inline;
+  z-index: 100;
+}
+
+#centerBar{
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+  height:42px;
+  min-width: 538px;
+  overflow: hidden;
+}
+
+#left{
+  float: left;
+  width: 66.6%;
+  min-width: 235.267px;
+  justify-content: flex-start;
+  display: flex;
+  height: 42px;
+}
+
+#searchContainer{
+  margin-left: 0;
+  min-width: 144px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #3b5998;
+  border-radius: 3px;
+  box-sizing: border-box;
+  height: 26px;
+  left: -1px;
+  margin-top: 0;
+  max-width: 448px;
+  overflow: hidden;
+  padding-left: 5px;
+  padding-right: 48px;
+  position: relative;
+  top: 8px;
+}
+
+#searchIcon{
+  background-origin: content-box;
+  display: inline-block;
+  margin: -1px;
+  padding: 1px;
+  position: relative;
+  right: 0;
+  top: -1px;
+  vertical-align: middle;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/ys/r/gsHtDeBkpne.png);
+  background-repeat: no-repeat;
+  background-size: 84px 246px;
+  background-position: -58px -210px;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  z-index: 2;
+}
+
+#searchButton{
+  background: #f6f7f9;
+  border: none;
+  border-radius: 0 2px 2px 0;
+  bottom: 0;
+  cursor: pointer;
+  display: block;
+  line-height: 1;
+  padding: 0 16px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 1;
+}
+
+#right{
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  display: flex;
+  height:42px;
+  width: 320px;
+}
+
+#home{
+  display: inline-block;
+  padding: 0 9px;
+  vertical-align: top;
+  padding-left: 0px;
+  width: 147.2px;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+#myPage{
+  float: left;
+}
+
+#myPageId{
+  background-color: transparent;
+  color: inherit;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  height: 27px;
+  line-height: 28px;
+  padding: 0 10px 1px;
+  position: relative;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+#myProfilePic{
+  border-radius: 2px;
+  display: inline;
+  margin: 2px 6px 2px -8px;
+  vertical-align: inherit;
+  height: 24px;
+  width: 24px;
+}
+
+#myHome{
+  float: left;
+  margin-left: 1px;
+  position: relative;
+}
+
+#homePage{
+  background-color: transparent;
+  color: inherit;
+  float: left;
+  font-size: 12px;
+  font-weight: bold;
+  height: 27px;
+  line-height: 28px;
+  padding-left: 6px;
+  position: relative;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+#application{
+  display: inline-block;
+  padding: 0 9px;
+  vertical-align: top;
+  width: 117px;
+}
+
+#safety{
+  display: inline-block;
+  padding: 0 9px;
+  vertical-align: top;
+  padding-right: 0px;
+  width: 55px;
+}
+
+#searchContent{
+  height: 21px;
+  padding-top: 2px;
+  float:left;
+  line-height: 18px;
+  padding: 3px 0 0;
+  text-shadow: none;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  font-family: Helvetica, Arial, sans-serif;
+  padding-left: 2px;
+}
+
+#fbLogo{
+  float: left;
+  width: 31px;
+  height: 42px;
+}
+
+#fbSearchBar{
+  width:100%;
+  margin-left: 2px;
+}
+
+#LOGO{
+  background-image: url(Http://www.facebook.com/rsrc.php/v3/yV/r/k7DbdjRm_Gj.png);
+  background-repeat: no-repeat;
+  background-size: 28px 986px;
+  background-position: 0 -170px;
+  display: block;
+  height: 24px;
+  outline: none;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 24px;
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+#logo{
+  display: inline;
+  width: 31px;
+  height:inherit;
+}
+
+#search{
+  display:inline;
+  width: 593.2px;
+  height:inherit;
+}
+
+#userHome{
+  width: 162.8px;
+  display: inherit;
+}
+
+#icons{
+  width: 117px;
+  display: inherit;
+}
+
+#settings{
+  width: 55px;
+  display: inherit;
+}
+
+/*CONTENT*/
+#pre {
+  height: 33px
+}
+
+#globalContainer{
+  clear: both;
+  margin: 0 auto;
+  min-height: 499px;
+  width: 981px;
+  position: relative;
+}
+
+#ad{
+  top: 60px;
+  position: fixed !important;
+  max-width: 152px;
+}
+
+.friended{
+  width: 12px;
+  height: 12px;
+  background-position: -150px -96px;
+  bottom: 1px;
+  position: relative;
+  vertical-align: middle;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yy/r/V9nu4TE_F-C.png);
+  background-size: 170px 126px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: none;
+  z-index: 100;
+}
+
+#addFB{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.adContent{
+  color: #1d2129;
+  font-size: 11px;
+  padding-top: 6px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.sponsord{
+  margin-right: 20px;
+  margin-top: 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #c8d1e2;
+}
+
+.sponsor{
+  font-weight: bold;
+  color: #666;
+  font-size: 12px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#rightControl{
+  width: 122px;
+  margin-right: -5px;
+  padding-right: 0px;
+  padding-top: 0px;
+  float: right;
+}
+
+#main{
+  width: 851px !important;
+  position: relative;
+  float: left;
+  margin-right: 0px;
+}
+
+#headerBase{
+  position:relative;
+  margin-left: -1 -1 0;
+}
+
+#sector{
+  width: 100%;
+  height: 2px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+#header{
+  position: relative;
+  padding: 0;
+  border: 1px solid #d3d6db;
+  border-radius: 0 0 3px 3px;
+  margin-bottom: 17px;
+  top: -16px;
+}
+
+#cover{
+  display: block;
+  position: relative;
+  max-height: 314.4px;
+}
+
+#coverBackground{
+  background: url(https://www.facebook.com/rsrc.php/v3/yJ/r/UgNUNkKQar6.png) bottom left repeat-x;
+  border: 1px solid #000;
+  border-color: rgba(0, 0, 0, .25);
+  border-top-color: rgba(0, 0, 0, .1);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-bottom-color: rgba(0, 0, 0, .4)
+}
+
+#nameContainer{
+  bottom: 12px;
+  left: 201px;
+  position: absolute;
+  font-weight:bold;
+  letter-spacing: 0;
+  font-size: 24px;
+  max-width: 275px;
+  text-shadow: 0 0 3px rgba(0,0,0,.8);
+
+}
+
+#coverName{
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 30px;
+}
+
+#alias{
+  float: left;
+  font-size: 20px;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 280px;
+}
+
+#action{
+  bottom: 55px;
+  padding: 0;
+  position: absolute;
+  right: 15px;
+  width: 360px;
+  float: right;
+}
+
+#actions{
+  display: inline-block;
+  text-align: right;
+}
+
+#friendButton{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+  margin-left: 12px;
+  text-align: right;
+  width: 97.8px;
+  height:27.6px;
+}
+
+#fdButton{
+  display: none !important;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-clip: padding-box;
+  border-color: rgba(0,0,0,.4);
+  line-height: 26px;
+  padding:5px 10px;
+  background-color: #f6f7f9;
+  color:#4b4f56;
+  margin-left: 4px;
+  padding:0 10px;
+  border: 1px solid;
+  border-radius: 2px;
+  box-sizing: content-box;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  text-shadow: none;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  margin: 0;
+}
+
+#friendMore{
+  bottom: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 10px;
+  height: 8px;
+  background-position: -264px -226px;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yc/r/Lu3QNiiX_PB.png);
+  background-size: 500px 290px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+#buttonA{
+  display: inline;
+  width: 96px;
+  height:26px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-clip: padding-box;
+  line-height: 26px;
+  background-color: #f6f7f9;
+  color:#4b4f56;
+  padding:5px 10px;
+  border: 1px solid;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  box-sizing: content-box;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  text-shadow: none;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  margin: 0;
+  left:214px;
+  bottom: -67.5px;
+}
+
+#moreButton{
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  line-height: 26px;
+  border: 1px solid;
+  padding:11px 12px 11.5px 13px;
+  top:38px;
+  left:266px;
+
+}
+
+#moreActions{
+  bottom: 1px;
+  position: relative;
+  vertical-align: middle;
+  background-position: 0 -256px;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yc/r/Lu3QNiiX_PB.png);
+  background-size: 500px 290px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  top:42px;
+  left: 237px;
+  z-index: 1000;
+}
+
+#buttonSpan{
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  white-space: nowrap;
+  line-height: 26px;
+  word-wrap: normal;
+  text-shadow: none;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#barMenu{
+  background: white;
+  border: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  clear: right;
+  padding-left: 201px;
+  width: 649px;
+  font-family: Helvetica, Arial, sans-serif;
+  top: -34px;
+  position: relative;
+}
+
+#menu{
+  border-right: 1px solid #d3d6db;
+  font-size: 12px;
+  height: 41px;
+}
+
+#selectedTimeline{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yc/r/Lu3QNiiX_PB.png);
+  background-repeat: no-repeat;
+  background-size: 500px 290px;
+  background-position: -134px -226px;
+  bottom: -1px;
+  height: 9px;
+  left: 50%;
+  margin-left: -8px;
+  position: absolute;
+  width: 17px;
+  top:33px;
+}
+
+#timeLine{
+  border-width: 0 1px;
+  color: #4b4f56;
+  border-right: 1px solid #e9eaed;
+  float:left;
+  font-size: 14px;
+  font-weight: bold;
+  height: 43px;
+  line-height: 3.05;
+  padding: 0 17px;
+  position: relative;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+#about, #friends, #photos, #more{
+  border-right: 1px solid #e9eaed;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  height: 43px;
+  line-height: 3.05;
+  padding: 0 17px;
+  position: relative;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: #365899;
+  cursor: pointer;
+}
+
+#moreInfo{
+  width: 8px;
+  height: 6px;
+  background-position: -158px -36px;
+  margin-left: 7px;
+  position: relative;
+  top: -2px;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yy/r/V9nu4TE_F-C.png);
+  background-size: 170px 126px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+#mutual{
+  color: #89919c;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 3.05;
+  white-space: nowrap;
+}
+
+#profilePic{
+  box-shadow: none;
+  margin-top: 0;
+  top: 158px;
+  background: rgba(0, 0, 0, .3);
+  border-radius: 3px;
+  display: block;
+  left: 15px;
+  padding: 1px;
+  position: absolute;
+  color: #365899;
+  height: 168px;
+  width: 167.5px;
+}
+
+#markProfile{
+  background-color: #fff;
+  border: 4px solid #fff;
+  border-radius: 2px;
+}
+
+#body{
+  background-color: #e9ebee;
+  list-style: none;
+  position: relative;
+  list-style: none;
+}
+
+#body2{
+  background-color: #e9ebee;
+  list-style: none;
+  position: relative;
+  list-style: none;
+  left:-130px;
+}
+
+#activity{
+  float: right;
+  margin-left: 15px;
+  width: 512px;
+  margin-top: -14px;
+}
+
+#info{
+  width: 323px;
+  float: left;
+  margin-left: 0;
+  position: absolute;;
+  top: -367px;
+  left: 130px;
+  position: relative;
+}
+
+#friendRequest{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yV/r/k7DbdjRm_Gj.png);
+  background-repeat: no-repeat;
+  background-size: 28px 986px;
+  background-position: 0 -196px;
+  opacity: .6;
+  background-clip: content-box;
+  background-origin: content-box;
+  height: 24px;
+  padding: 0 3px 3px 0;
+  width: 24px;
+}
+
+#message{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yV/r/k7DbdjRm_Gj.png);
+  background-repeat: no-repeat;
+  background-size: 28px 986px;
+  background-position: 0 -352px;
+  opacity: .8;
+  background-clip: content-box;
+  background-origin: content-box;
+  height: 24px;
+  padding: 0 3px 3px 0;
+  width: 24px;
+}
+
+#lock{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yV/r/k7DbdjRm_Gj.png);
+  background-repeat: no-repeat;
+  background-size: 28px 986px;
+  background-position: 0 -904px;
+  height: 16px;
+  opacity: .6;
+  width: 16px;
+}
+
+#moreLock{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yV/r/k7DbdjRm_Gj.png);
+  background-repeat: no-repeat;
+  background-size: 28px 986px;
+  background-position: 0 -868px;
+  display: block;
+  height: 16px;
+  opacity: .6;
+  overflow: hidden;
+  text-indent: -999px;
+  white-space: nowrap;
+  width: 16px;
+}
+
+.container{
+  float: left;
+  padding-top: 6px;
+  padding-left: 5px;
+}
+
+.lineSector{
+  background: rgba(0, 0, 0, .1);
+  content: '';
+float: left;
+height: 18px;
+left: -1px;
+position: relative;;
+top: 12px;
+width: 1px;
+}
+#notification{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yV/r/k7DbdjRm_Gj.png);
+  background-repeat: no-repeat;
+  background-size: 28px 986px;
+  background-position: 0 -248px;
+  opacity: .8;
+  opacity: .6;
+  background-clip: content-box;
+  background-origin: content-box;
+  height: 24px;
+  padding: 0 3px 3px 0;
+  width: 24px;
+}
+
+.app{
+  float: left;
+  width: 33px;
+  height: 42px;
+}
+
+.appContainer{
+  float: none;
+  margin: 5px 0 6px 0;
+  position: relative;
+  padding: 4px 3px 0;
+}
+
+#OLinfo{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 323px;
+
+}
+
+.infoList{
+  clear: none;
+  float: none;
+  display: inline-block;
+  width: 323px;
+  color: #4b4f56;
+  margin-bottom: 17px;
+  position: relative;
+}
+
+.liDIV{
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+  color: #4b4f56;
+}
+
+.section{
+  padding-bottom: 4px;
+  padding-top: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+#introIcon{
+  width: 24px;
+  height: 24px;
+  background-position: 0 -24px;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yf/r/xHXHE6b5ZoM.png);
+  background-size: 28px 378px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right: 5px;
+  float: left;
+}
+
+#friendIcon{
+  width: 24px;
+  height: 24px;
+  background-position: 0 -184px;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yY/r/8831dC8qwKq.png);
+  background-size: 54px 228px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right: 5px;
+  float: left;
+}
+
+#introSub1{
+  background-position: 0 -350px;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yf/r/xHXHE6b5ZoM.png);
+  background-size: 28px 378px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  float: left;
+  margin-top: 2px;
+  opacity: .6;
+  margin-right: 12px;
+}
+
+#introSub2{
+  background-position: -14 -308px;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yf/r/xHXHE6b5ZoM.png);
+  background-size: 28px 378px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  float: left;
+  margin-top: 2px;
+  opacity: .6;
+  margin-right: 12px;
+}
+
+#introSub3{
+  background-position: -14 -336px;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yf/r/xHXHE6b5ZoM.png);
+  background-size: 28px 378px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  float: left;
+  margin-top: 2px;
+  opacity: .6;
+  margin-right: 12px;
+}
+
+.sectionII{
+  margin-left: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.content{
+  margin: 0 12px;
+  padding-bottom: 4px;
+  margin-top: 8px;
+  padding-top: 3px;
+}
+
+.profileLink{
+  color: #365899;
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
+
+.sectionTitle{
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #4b4f56;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#introUL{
+  padding-top: 4px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#photoIcon{
+  width: 24px;
+  height: 24px;
+  background-position: -26px -184px;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yY/r/8831dC8qwKq.png);
+  background-size: 54px 228px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right: 5px;
+  float: left;
+}
+
+.infoItem{
+  padding: 4px 16px 4px 0;
+  display: block;
+}
+
+.itemDIV{
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.items{
+  color: #4b4f56;
+}
+
+.photoDisplay{
+  padding: 0 5px 4px 5px;
+}
+
+.photoTable{
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: -1px;
+  margin-left: -3px;
+}
+
+.photoRow{
+  border-collapse: collapse;
+  border-spacing: 0;
+  list-style: none;
+  width: 311px;
+}
+
+.photoThumbnail{
+  padding-left: 3px;
+  padding-bottom: 3px;
+}
+
+.thumbnail{
+  width: 101px;
+  height: 101px;
+  overflow: hidden;
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: left;
+}
+
+.friendPicture{
+  height: 101px;
+  width: 101px;
+}
+
+.friendName{
+  background: linear-gradient(transparent, rgba(0, 0, 0, .7));
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+#language{
+  display: inline-block;
+  width: 323px;
+  height: 57.7667px;
+}
+
+#languages{
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+  height: 32.1667px;
+  font-weight: normal;
+  font-size: 12px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:#365899;
+}
+
+#choseLan{
+  flex: 1 0 0px;
+  height: 57.7667px;
+  overflow: hidden;
+  width: 251.8px;
+  height: 32.1667px;
+  display: inline-block;
+}
+
+#chosenLan{
+  color: #90949c;
+}
+
+#addLan{
+  margin-top: 1px;
+  float: right;
+  padding-left: 12px;
+  width: 32.1667px;
+  display: inline;
+  background-color: #f6f7f9;
+  border-color: #ced0d4;
+}
+
+#addLanButton{
+  border: 1px solid;
+  border-radius: 2px;
+  float: right;
+  line-height: 26px;
+  padding: 0 10px;
+  background-color: #f6f7f9;
+  border-color: #ced0d4;
+  color:#4b4f56;
+}
+
+#addLanButtonImg{
+  display: inline;
+  width: 12px;
+  height: 12px;
+  background-position: -28px -112px;
+  bottom: 1px;
+  position: relative;
+  vertical-align: middle;
+  background-image: url(https://www.facebook.com/rsrc.php/v3/yy/r/V9nu4TE_F-C.png);
+  background-size: 170px 126px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+#terms{
+  color: #90949c;
+  padding: 0 12px 12px;
+  width: 323px;
+  height: 68.25px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+#adChoice{
+  height: 16px;
+  background-position: 0 -210px;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yY/r/8831dC8qwKq.png);
+  background-size: 54px 228px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 16px;
+}
+
+#moreChoice{
+  width: 6px;
+  height: 4px;
+  background-position: -38px -122px;
+  margin-left: 3px;
+  vertical-align: middle;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yY/r/8831dC8qwKq.png);
+  background-size: 54px 228px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+#company{
+  margin-top: 8px;
+}
+
+#post{
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+  width: 510px;
+  height: 149.183px;
+}
+
+#postContainer{
+  width: 512px;
+  margin-bottom: 17px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  height: 150.783px;
+}
+
+#postTop{
+  border-top: none;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin: 0;
+  border-bottom: 1px solid #e5e5e5;
+
+  position: relative;
+  background-color: #f6f7f9;
+  z-index: 1;
+  height: 34.8833px;
+}
+
+#postblock{
+    padding: 10px 12px 8px 12px;
+  position: relative;
+  float: left;
+  width: 163.6px;
+  height:16.0833px;
+}
+
+#postIcon{
+  width: 16px;
+  height: 16px;
+  background-position: 0 -184px;
+  background-image: url(http:/www.facebook.com/rsrc.php/v3/yf/r/xHXHE6b5ZoM.png);
+  background-size: 28px 378px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+
+}
+
+#postTab{
+  color: #4b4f56;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  left:33px;
+  position: absolute;
+  vertical-align: middle;
+}
+
+#selected{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yc/r/Lu3QNiiX_PB.png);
+  background-repeat: no-repeat;
+  background-size: 500px 290px;
+  background-position: -225px -226px;
+  bottom: -1px;
+  height: 9px;
+  left: 43px;
+  margin-left: -8px;
+  position: absolute;
+  width: 17px;
+  top:28px;;
+}
+
+#pvIcon{
+  width: 16px;
+  height: 16px;
+  background-position: -18px -394px;
+  background-image: url(http:/www.facebook.com/rsrc.php/v3/yi/r/2o2wGuDvCZ0.png);
+  background-size: 50px 534px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+  left: 4px;
+}
+
+#pvDiv{
+  border-left: 1px solid #ccc;
+  position: absolute;
+  left: 65px;
+  top: 8.5px;
+  margin-right: 3px;
+  padding-left: 3px;
+}
+
+#pv{
+  color: #4b4f56;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  position: relative;
+  top: -3.5px;
+  left:7px;
+}
+
+#postBody{
+  border-top: none;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  position: relative;
+}
+
+#postContent{
+  height: 69px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+#head{
+  float: left;
+  min-height: 1px;
+  margin: 12px 0 0 12px;
+}
+
+#myHead{
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 40px;
+}
+
+#write{
+  overflow: hidden;
+  width: 458px;
+  height: 69px;
+}
+
+#writeBox{
+  background-color: transparent;
+  border: 0;
+  height: 100%;
+  line-height: 18px;
+  outline: 0;
+  padding: 13px 12px;
+  resize: none;
+}
+
+#postMark{
+  border: none;
+  width: 100%;
+  word-wrap: break-word;
+  color: #90949c;
+  text-align: initial;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  position: relative;
+  top: 10px;
+}
+
+#leftOption{
+  float: left;
+  height: 40px;
+  width: 200px;
+}
+
+#rightSubmit{
+  float: right;
+  width: 116.8px;
+  height: 40.5px;
+}
+
+#option1{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/y-/r/rT-C4UHLETP.png);
+  background-repeat: no-repeat;
+  background-size: 36px 180px;
+  background-position: 0 -126px;
+  float: left;
+  height: 16px;
+  margin: 12px;
+  position: relative;
+  width: 16px;
+}
+
+#option2{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/y-/r/rT-C4UHLETP.png);
+  background-repeat: no-repeat;
+  background-size: 36px 180px;
+  background-position: 0 -144px;
+  float: left;
+  height: 16px;
+  margin: 12px;
+  position: relative;
+  width: 16px;
+}
+
+#option3{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/y-/r/rT-C4UHLETP.png);
+  background-repeat: no-repeat;
+  background-size: 36px 180px;
+  background-position: -18px -126px;
+  float: left;
+  height: 16px;
+  margin: 12px;
+  position: relative;
+  width: 16px;
+}
+
+#option4{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/y-/r/rT-C4UHLETP.png);
+  background-repeat: no-repeat;
+  background-size: 36px 180px;
+  background-position: -18px -144px;
+  float: left;
+  height: 16px;
+  margin: 12px;
+  position: relative;
+  width: 16px;
+}
+
+#option5{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yr/r/Aur-Aw_Kpl6.png);
+  background-repeat: no-repeat;
+  background-size: 18px 36px;
+  background-position: 0 -00;
+  float: left;
+  height: 16px;
+  margin: 12px;
+  position: relative;
+  width: 16px;
+}
+
+#postSetting{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#pSeetingIcon{
+  width: 31.6px;
+  height: 23.6px;
+}
+
+#gear{
+  opacity: .5;
+  width: 18px;
+  background-position: -18px -300px;
+  bottom: -5px;
+  position: relative;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yi/r/2o2wGuDvCZ0.png);
+  background-size: 50px 534px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16px;
+  text-align: center;
+}
+
+#postButton{
+  color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 22px;
+  padding: 0 16px;
+  vertical-align: baseline;
+  background-color: #4267b2;
+  border: 1px solid #4267b2;
+  border-radius: 2px;
+  box-sizing: content-box;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  text-shadow: none;
+}
+
+.postGroup{
+  clear:both;
+  float: right;
+  width: 512px;
+  height: 100px;
+  margin-left: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+.recentPost{
+  display: block;
+  position: relative;
+  word-wrap: break-word;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.postShare{
+  padding: 12px 12px 0;
+  position: relative;
+}
+
+.postDropDown{
+  margin-top: -12px;
+  height: 0;
+  left: 0;
+  overflow: visible;
+  position: absolute;
+  right: 0;
+}
+
+.dropDownIcon{
+  opacity: 1;
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: inline-block;
+}
+
+#dropDownIconPic{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yc/r/Lu3QNiiX_PB.png);
+  background-repeat: no-repeat;
+  background-size: 500px 290px;
+  background-position: -119px -200px;
+  height: 20px;
+  margin-right: 7px;
+  margin-top: 10px;
+  width: 20px;
+  display: block;
+}
+
+.postInfo{
+  margin-bottom: 11px;
+  display: inline;
+}
+
+.postInfoHead{
+  float: left;
+  margin-right: 8px;
+  display: block;
+}
+
+.postInfoProfile{
+  position: relative;
+  height: 40px;
+  width: 40px;
+}
+
+.postInformation{
+  float: left;
+  position: relative;
+  width: 438.4px;
+  height: 46px;
+  padding-bottom: 6px;
+}
+
+.peopleInvolved{
+  position: relative;
+  top: -14px;
+  color: #365899;
+  margin-bottom: 2px;
+  padding-right: 22px;
+  font-size: 14px;
+  line-height: 1.38;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.regular{
+  color: #90949c;
+  font-weight: normal;
+}
+
+.dateTime{
+  color: #90949c;
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: -14px;
+}
+
+#sharedWith{
+  width: 12px;
+  height: 12px;
+  background-position: -14px -318px;
+  display: inline-block;
+  position: absolute;
+  top: 23px;
+  left:85px;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yi/r/2o2wGuDvCZ0.png);
+  background-size: 50px 534px;
+  background-repeat: no-repeat;
+}
+
+.postContentContainer{
+  margin-top: 10px;
+}
+
+.commentTop{
+  color: #7f7f7f;
+  margin-top: 12px;
+  padding-bottom: 4px;
+  position: relative;
+  border-top: 1px solid #e5e5e5;
+  margin: 0 12px;
+  padding-top: 4px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  margin-right: 12px;
+  padding: 6px 4px 4px 0;
+}
+
+.likeButton{
+  float: left;
+  margin-right: 35px;
+}
+
+.commentButton{
+  float: left;
+  margin-right: 35px;
+}
+
+.shareButton{
+  float: left;
+}
+
+.thumb{
+  background-image: url(http:/www.facebook.com/rsrc.php/v3/yc/r/Lu3QNiiX_PB.png);
+  background-repeat: no-repeat;
+  background-size: 500px 290px;
+  background-position: -48px -274px;
+  content: '';
+  height: 14px;
+  margin: 0 6px -3px 0;
+  width: 14px;
+  display: inline-block;
+}
+
+.commentWindow{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yc/r/Lu3QNiiX_PB.png);
+  background-repeat: no-repeat;
+  background-size: 500px 290px;
+  background-position: -32px -274px;
+  content: '';
+  display: inline-block;
+  height: 14px;
+  margin: 0 6px -3px 0;
+  width: 14px;
+}
+
+.share{
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yc/r/Lu3QNiiX_PB.png);
+  background-repeat: no-repeat;
+  background-size: 500px 290px;
+  background-position: -112px -274px;
+  content: '';
+  display: inline-block;
+  height: 14px;
+  margin: 0 6px -3px 0;
+  width: 14px;
+}
+
+.commentSector{
+  height: 17px;
+  background-color: #fff;
+}
+
+.response{
+  background-color: #f6f7f9;
+  border-radius: 0 0 3px 3px;
+  color: #1d2129;
+  overflow: visible;
+  width: auto;
+  height: 126.8px;
+}
+
+.commentFonts{
+  color: #1d2129;
+  font-size: 12px;
+  position: relative;
+  top: 10px;
+  left: -32px;
+}
+
+.people{
+  font-weight: bold;
+  color: #365899;
+}
+
+.friendComment{
+  position: relative;
+  height: 47px;
+  border-top: 1px solid #e1e2e3;
+  margin-left: 12px;
+  margin-right: 12px;
+  top: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.hyperLike{
+  color: #365899;
+}
+
+.writeAComment{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #90949c;
+  position: relative;
+  top: 7px;
+  left: 6px;
+}
+
+#OLpost2{
+  position: relative;
+  top: 543px;
+}
+
+#OLpost3{
+  position: relative;
+  top: 1085px
+}
+
+.extraFonts{
+  color: #90949c;
+  font-size: 12px;
+  font-weight: normal;
+  position: relative;
+  top: 15px;
+  left: -32px;
+}
+
+#sylvia{
+  height: 32px;
+  width: 32px;
+  position: relative;
+  top: -12px;
+}
+
+.numLikes{
+  border-top: 1px solid #e1e2e3;
+  margin: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 9px;
+  padding-top: 9px;
+  line-height: 20px;
+  color: #365899;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+.likedContainer{
+  display: inline;
+  margin-right: 4px;
+  float: left;
+  width: 16px;
+}
+
+.liked{
+  position: relative;
+  top: 2px;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yy/r/V9nu4TE_F-C.png);
+  background-repeat: no-repeat;
+  background-size: 170px 126px;
+  background-position: -18px -62px;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
+
+.writeComment{
+  border-radius: 0 0 2px 2px;
+  padding-bottom: 8px;
+  padding-top: 2px;
+  background-color: #f6f7f9;
+  margin: 0 12px;
+  padding: 4px 0;
+  position: relative;
+  top:18px;
+}
+
+.myID{
+  left: -12px;
+  top: -18px;
+  float: left;
+  height: 32px;
+  width: 32px;
+  position: relative;
+}
+
+.inputComment{
+  float: left;
+  width: 446.4px;
+  height: 30px;
+  border: 1px solid #e1e2e3;
+  position: relative;
+  top: -50px;
+  left: 20px;
+}
+
+.emoji{
+  display: inline-block;
+  float: right;
+  background-image: url(http://www.facebook.com/rsrc.php/v3/yc/r/Lu3QNiiX_PB.png);
+  background-repeat: no-repeat;
+  background-size: 500px 290px;
+  background-position: -6px -234px;
+  height: 14px;
+  width: 14px;
+  position:relative;
+  right: 9px;
+  bottom: -8px;
+}
+
+.photoComment{
+  display: inline-block;
+  float: right;
+  background-image: url(https://www.facebook.com/rsrc.php/v3/y6/r/IAe0SkAEjsA.png);
+  background-repeat: no-repeat;
+  background-size: 36px 714px;
+  background-position: 0 -210px;
+  height: 12px;
+  width: 15px;
+  position:relative;
+  right: 29px;
+  bottom: -2px;
+}

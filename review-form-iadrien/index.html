@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSE 104 - Assignment 03 review form Adrien</title>
+    </head>
+    <body>
+
+<form action="http://kraigh.com/cse104/reviews.php" method="post">
+<fieldset>
+  <legend>Personal information:</legend>
+  Full Name:<br>
+  <input type="text" name="name" >
+  <br>
+  Email:<br>
+  <input type="email" name="email" >
+  <br>
+</fieldset>
+<fieldset>
+  <legend>Reviews</legend>
+  Select the dish that you had:
+  <select name="menu">
+    <option value="steak" selected>Steak</option>
+    <option value="chicken">Chicken</option>
+    <option value="vegetarian">Vegetarian</option>
+  </select><br>
+  Your rating:
+  <input type="radio" name="rating" value="5" checked> 5
+  <input type="radio" name="rating" value="4"> 4
+  <input type="radio" name="rating" value="3"> 3
+  <input type="radio" name="rating" value="2"> 2
+  <input type="radio" name="rating" value="1"> 1
+  <br>
+  <input type="checkbox" name="greeted[]" value="entered"> Check here if you are greeted upon entering<br>
+  <input type="checkbox" name="greeted[]" value="exited"> Check here if you are greeted upon existing<br>
+  Addtional comments:<br>
+  <textarea name="comments" rows="4" cols="50">
+  </textarea>
+</fieldset>
+<input type="submit" value="Submit">
+</form>
+
+    </body>
+</html>
