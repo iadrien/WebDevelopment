@@ -1,0 +1,20 @@
+    <div><br>
+      Search: <input ng-model="query" placeholder="Looking For .... ?">
+    </div>
+    <div>
+      <h1>List of Coffees </h1>
+      <table class="table">
+          <tr>
+	    <th class="col-md-3"><mark>Reviews</mark></th>
+            <th class="col-md-3"><mark>Brand</mark></th>
+            <th class="col-md-3"><mark>Name</mark></th>
+            <th class="col-md-3"><mark>Country</mark></th>
+          </tr>
+          <tr ng-repeat="coffee in coffees | filter:query | orderBy: 'name'">
+            <td class="col-md-3"><a href="#/view2/{{coffee.id}}"><kbd>View</kbd></a></td>
+            <td class="col-md-3">{{coffee.brand}}</td>
+            <td class="col-md-3">{{coffee.name}}</td>
+            <td class="col-md-3">{{coffee.country}}</td>
+          </tr>
+      </table>
+    </div>

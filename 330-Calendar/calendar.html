@@ -1,0 +1,479 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>CSE330-Module5-Calendar-Xie-Birns</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="registerD" class="viewer" >
+
+      <div id="logform">
+
+          <label>Username: <input type="text" name="username" id="lusername"></label>
+          <br>
+          <label>Password: <input type="text" name="password" id="lpassword"></label>
+          <br>
+          <a class="abutton" id="login" name="submit1" value="Login">Log In</a>
+
+      </div>
+
+
+      <div id="registerform">
+
+          <label>Username(Only numbers and letters): <input type="text" name="username" id="rusername"></label>
+          <br>
+          <label>Password(Only numbers and letters): <input type="password" name="password1" id="rpassword1"></label>
+          <br>
+          <label>Check Password: <input type="password" name="password2" id="rpassword2"></label>
+          <br>
+          <a class="abutton" id="register" name="submit2" value="Create Account">Create Account</a>
+          <br>
+
+      </div>
+      <div id="close1">
+        <a class="abutton" id="closeviewer1">Close</a>
+      </div>
+    </div>
+    <div id="addevent" class="viewer">
+      <div id="addform">
+        <label>Title(50 Characters Max): <input type="text" name="title" id="title" maxlength="50"></label>
+        <br>
+        <label>Desciption(200 Characters Max): <input type="text" name="des" id="description" maxlength="200"></label>
+        <br>
+        <label>Year: <input type="number" name="year" id="year"></label>
+        <br>
+        <label>Month: <input type="number" name="month" id="month" min="1" max="12"></label>
+        <br>
+        <label>Day: <input type="number" name="day" id="day" min="1" max="31"></label>
+        <br>
+        <label>Time: <input type="time" name="time" id="time"></label>
+        <br>
+        <input type="hidden" name="token" id="token" value=""></label>
+        <br>
+        <a class="abutton" id="postevent" name="postevent" value="PostEvent">Post Event</a>
+        <br>
+      </div>
+      <div id="close2">
+        <a class="abutton" id="closeviewer2">Close</a>
+      </div>
+    </div>
+    <div id="viewer" class="viewer">
+      <div id="vtitle">
+      </div>
+      <div id="vtime">
+      </div>
+      <div id="vdescription">
+      </div>
+      <div id="delete">
+        <a class="abutton" id="deleteevent">Delete</a>
+      </div>
+      <div id="close3">
+        <a class="abutton" id="closeviewer3">Close View</a>
+      </div>
+    </div>
+    <div class="container">
+      <div id="header">
+        <h1>Calendar</h1>
+      </div>
+      <div id="left">
+        <div class="container">
+          <a class="abutton" id="backward"><</a>
+        </div>
+      </div>
+      <div id="center">
+        <div id="date">
+        </div>
+        <div id="events">
+<table id="table">
+  <tr>
+    <th>Mo</th>
+    <th>Tu</th>
+    <th>We</th>
+    <th>Th</th>
+    <th>Fr</th>
+    <th>Sa</th>
+    <th>Su</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+        </div>
+        <div id="functions">
+          <a class="abutton" id="update">Update</a>
+          <a class="abutton" id="addbutton">Add</a>
+          <a class="abutton" id="thisMonth">This Month</a>
+          <a class="abutton" id="logout">Log Out</a>
+          <a class="abutton" id="loginbutton">Log In</a>
+        </div>
+      </div>
+      <div id="right">
+        <div class="container">
+          <a class="abutton" id="forward">></a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var date = new Date();
+      var dStringM = date.getMonth() + 1;
+      var dStringY = date.getFullYear();
+
+      document.getElementById("date").innerHTML = "<h4>Time: " + dStringM.toString() + "/" + dStringY.toString() + "</h4>";
+      update();
+
+
+      document.getElementById("backward").addEventListener("click", backward, false);
+      document.getElementById("forward").addEventListener("click", forward, false);
+      document.getElementById("update").addEventListener("click", update, false);
+      document.getElementById("thisMonth").addEventListener("click", thisMonth, false);
+      document.getElementById("closeviewer1").addEventListener("click", close, false);
+      document.getElementById("closeviewer2").addEventListener("click", close, false);
+      document.getElementById("closeviewer3").addEventListener("click", close, false);
+      document.getElementById("loginbutton").addEventListener("click", showlog, false);
+      document.getElementById("logout").addEventListener("click", logout, false);
+      document.getElementById("addbutton").addEventListener("click",showAdd,false);
+      document.getElementById("deleteevent").addEventListener("click",deleteevent,false);
+      document.getElementById("postevent").addEventListener("click",postevent,false);
+
+      ini();
+      checkstatus();
+      update();
+
+      function postevent(){
+
+          var title = document.getElementById("title").value;
+          var description = document.getElementById("description").value;
+          var year = document.getElementById("year").value;
+          var month = document.getElementById("month").value;
+          var day = document.getElementById("day").value;
+          var time = document.getElementById("time").value;
+          var token = document.getElementById("token").value;
+          var dataString = "title=" + encodeURIComponent(title) + "&description=" + encodeURIComponent(description) + "&year=" + encodeURIComponent(year) + "&month=" + encodeURIComponent(month) + "&day=" + encodeURIComponent(day) + "&time=" + encodeURIComponent(time) + "&token=" + encodeURIComponent(token);
+          var xmlHttp = new XMLHttpRequest();
+
+          xmlHttp.open("POST", "postevent.php", true);
+          xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+          xmlHttp.addEventListener("load", function(event){
+
+                  var jsonData = JSON.parse(event.target.responseText);
+
+                  if(jsonData.success){
+                          alert("Post successful.");
+                          close();
+                          update();
+                  }else{
+                          alert("Post failed. "+ jsonData.message);
+                  }
+          }, false);
+          xmlHttp.send(dataString);
+      }
+
+      function deleteevent(){
+        var xmlHttp = new XMLHttpRequest();
+        var id = document.getElementById("viewer").value;
+        // event id is visible to client side. so using get is not
+        // revealing extra information. there are identity checks
+        // on the serverside
+        xmlHttp.open("GET", "delete.php?id="+id, true);
+        xmlHttp.addEventListener("load", deletes, false);
+        xmlHttp.send(null);
+      }
+
+      function deletes(event){
+        close();
+        update();
+      }
+
+      function showlog(){
+        document.getElementById("registerD").style.display = "inline";
+      }
+
+      function showAdd(){
+        document.getElementById("addevent").style.display = "inline";
+      }
+
+      function logout(){
+        var xmlHttp = new XMLHttpRequest();
+
+        // logging out: no data are exchanged
+        xmlHttp.open("GET", "logout.php", true);
+        xmlHttp.addEventListener("load", logouted, false);
+        xmlHttp.send(null);
+      }
+
+      function logouted(event){
+        close();
+        checkstatus();
+        update();
+        document.getElementById("logout").style.display = "none";
+      }
+
+      function checkstatus(){
+        var token = document.getElementById("token").value;
+        var dataString = "token="+token;
+
+        var xmlHttp = new XMLHttpRequest();
+
+        xmlHttp.open("POST", "calendarcheckuser.php", true);
+        xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xmlHttp.addEventListener("load", response, false);
+        xmlHttp.send(dataString);
+
+      }
+
+      function response(event){
+          var status = JSON.parse(event.target.responseText);
+
+          if(!status.success){
+
+              document.getElementById("registerD").style.display = "inline";
+              document.getElementById("addbutton").style.display = "none";
+              document.getElementById("update").style.display = "none";
+              document.getElementById("loginbutton").style.display = "inline";
+          }else{
+              document.getElementById("addbutton").style.display = "inline";
+              document.getElementById("update").style.display = "inline";
+              document.getElementById("logout").style.display = "inline";
+              document.getElementById("loginbutton").style.display = "none";
+
+          }
+      }
+
+      function ini(){
+        var rows = document.getElementById("table").rows.length;
+        var col = document.getElementById("table").rows[0].cells.length;
+        for (var i = 1; i < rows; i++) {
+          for (var j=0;j<col;j++){
+            document.getElementById("table").rows[i].cells[j].innerHTML="";
+          }
+        }
+
+
+        var firstdayofmonth = new Date(date.getFullYear(),date.getMonth(),1);
+        var firstday = firstdayofmonth.getDay();
+        var days = new Date(date.getFullYear(),date.getMonth()+1,0).getDate();
+        var eachday= 1;
+
+        for (i=1;i<7;i++){
+          for(j=0;j<7;j++){
+
+            if(i==1&&j==0){
+              j=j+firstday-1;
+              if(j<0){
+                j=j+7;
+              }
+            }
+
+            if(eachday-1<days){
+
+              document.getElementById("table").rows[i].cells[j].innerHTML= eachday+"<br>";
+              eachday = eachday + 1;
+            }
+          }
+        }
+
+      }
+
+      function backward(){
+
+        var month = date.getMonth();
+        var year = date.getFullYear();
+
+        if(month!=0){
+          month = month - 1;
+          date.setMonth(month);
+        }else{
+          month = 11;
+          date.setMonth(month);
+
+          year = year - 1;
+          date.setFullYear(year);
+        }
+
+        var dateStringM = month + 1;
+        var dateStringY = year;
+        document.getElementById("date").innerHTML = "<h4>Time: " + dateStringM.toString() + "/" + dateStringY.toString() + "</h4>";
+        ini();
+        update();
+      }
+
+      function forward(){
+        var month = date.getMonth();
+        var year = date.getFullYear();
+
+        if(month!=11){
+          month = month + 1;
+          date.setMonth(month);
+        }else{
+          month = 0;
+          date.setMonth(month);
+
+          year = year + 1;
+          date.setFullYear(year);
+        }
+
+        var dateStringM = month + 1;
+        var dateStringY = year;
+        document.getElementById("date").innerHTML = "<h4>Time: " + dateStringM.toString() + "/" + dateStringY.toString() + "</h4>";
+        ini();
+        update();
+      }
+
+      function thisMonth(){
+        date = new Date();
+        var dStringM = date.getMonth() + 1;
+        var dStringY = date.getFullYear();
+        document.getElementById("date").innerHTML = "<h4>Time: " + dStringM.toString() + "/" + dStringY.toString() + "</h4>";
+        ini();
+        update();
+      }
+
+      function update(){
+        var yearString = date.getFullYear().toString();
+        var monthString = date.getMonth().toString();
+
+        var request = "events.php?year=" + yearString + "&month=" + monthString;
+        var xmlHttp = new XMLHttpRequest();
+
+        // update the calendar: fetch the events data from the server
+        // because the month and year are not senesitive information
+        // and user infomation is stored in server side session variables
+        // using get is enough
+        xmlHttp.open("GET", request, true);
+        xmlHttp.addEventListener("load", updateCalendar,false);
+        xmlHttp.send(null);
+      }
+
+      function updateCalendar(event){
+
+        ini();
+        var eventData = JSON.parse(event.target.responseText);
+
+        if(eventData.event.length!=0){
+          for (i=0;i<eventData.event.length;i++){
+            var id = eventData.event[i].id;
+            var day = eventData.event[i].day;
+            //alert("newtest");
+            date.setDate(day);
+
+            var firstdayofmonth = new Date(date.getFullYear(),date.getMonth(),1);
+            var firstday = firstdayofmonth.getDay();
+
+
+            var week = parseInt(day / 7, 10);
+            var reminder = day % 7;
+
+            if(reminder + firstday > 6){
+              week = week + 1;
+            }
+
+            var x = document.getElementById("table").rows[week].cells[date.getDay()].innerHTML;
+            var newEvent = "<a id=" + id + " href=javascript:view(" + id + ")>" + eventData.event[i].title + "</a><br>";
+
+            x = x + newEvent;
+            document.getElementById("table").rows[week].cells[date.getDay()].innerHTML = x;
+            //document.getElementById(id.toString()).addEventListener("click", view, false)
+          }
+        }
+      }
+
+      function view(id){
+        document.getElementById("viewer").value = id;
+
+        var request = "view.php?id=" + id;
+        var xmlHttp = new XMLHttpRequest();
+
+        // event id is visible to client side.
+        xmlHttp.open("GET", request, true);
+        xmlHttp.addEventListener("load", updateView, false);
+        xmlHttp.send(null);
+      }
+
+      function updateView(event){
+
+        var eventdetail = JSON.parse(event.target.responseText);
+
+        if(eventdetail.success){
+          var title = eventdetail.title;
+          var description = eventdetail.description;
+          var time = eventdetail.time;
+          document.getElementById("vtitle").innerHTML = title;
+          document.getElementById("vtime").innerHTML = "Time: " + time;
+          document.getElementById("vdescription").innerHTML = description;
+          document.getElementById("viewer").style.display = "inline";
+
+        }else{
+          alert(eventdetail.message);
+        }
+
+      }
+
+      function close(){
+
+        var x = document.getElementById("registerD");
+        x.style.display="none";
+        x = document.getElementById("addevent");
+        x.style.display="none";
+        x = document.getElementById("viewer");
+        x.style.display="none";
+
+      }
+
+    </script>
+    <script src="calendarRegister.js" type="text/javascript"></script>
+    <script src="calendarlogin.js" type="text/javascript"></script>
+  </body>
+</html>

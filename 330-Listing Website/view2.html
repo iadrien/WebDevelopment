@@ -1,0 +1,14 @@
+<h1>Reviews for {{targetCoffee.name}}</h1>
+<table class="table">
+  <tr>
+    <th class="col-md-3"><mark>Reviewer</mark></th>
+    <th class="col-md-3"><mark>Comment</mark></th>
+    <th class="col-md-3"><mark>Rating</mark></th>
+
+  </tr>
+  <tr ng-repeat="review in selected.reviews">
+    <td class="col-md-3">{{review.reviewer}}</td>
+    <td class="col-md-3">{{review.comment}}</td>
+    <td class="col-md-3">{{review.rating}}</td>
+    </tr>
+</table>

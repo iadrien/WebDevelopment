@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script src="/socket.io/socket.io.js"></script>
+      <!-- <script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="js/bootstrap.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script type="text/javascript">
+        function admin(name){
+          alert(name);
+          document.getElementById("victim").value = name;
+          document.getElementById("admin").style.display = "block";
+        }
+      </script>
+
+      <!-- css formatting -->
+      <style>
+         .col-md-6{
+            margin-left: 20px;
+            margin-top: 20px;
+         }
+
+         #initialScreen{
+           text-align: center;
+         }
+         #userOptions{
+           margin-left: 20px;
+           margin-top: 20px;
+         }
+         #activity{
+           margin-left: 20px;
+           margin-top: 20px;
+         }
+         body{
+           background-color: #9999cb;
+         }
+
+      </style>
+
+      <title>Chat Lobby</title>
+
+
+    <!-- html body / forms -->
+   </head>
+   <body>
+      <h1>Chat Lobby</h1>
+      <div id="RoomName"></div>
+      <div id="initialScreen">
+         <label>Username: <input id="username" name="username" type="text"></label>
+         <br><br>
+         <button id="login">Login</button>
+         <hr/>
+      </div>
+<div class="row">
+
+
+  <!-- section of user options, have initially hidden -->
+      <div class="col-md-6" id="userOptions" style="display:none;">
+
+          <br><br>
+                    <!--this is where you will create a chat room, with all relevant inputs-->
+          <div id="createchatroom">
+            <h3>Create Chat Room</h3>
+                <label>Room Name: <input id="roomName" type="text"> </label>
+                <br><br>
+                <label>Password? </label>
+                <select id="privORpub">
+                   <option value="1">no</option>
+                   <option value="2">yes</option>
+                </select>
+                <br><br>
+                <label>Password: <input type="password" id="password"> </label>
+                <br><br>
+                <!--need to create function createRoom-->
+                <button id="createRoom">Create Chat Room</button>
+          </div>
+          <br><br>
+
+          <!--this is where you will join a chat room, with all relevant chats listed available-->
+          <div id="joinChatroom" title="Join Chatroom">
+            <h3>Join Chat Room</h3>
+            <label>Room Name: <input id="changeRoom" type="text"></label>
+            <br><br>
+
+            <!--need to create function joinRoom-->
+            <button onclick="joinRoom()" id="joinRoom">Join Chat Room</button>
+
+            <div id="Rooms"></div>
+          </div>
+
+          <!--this is where you will join a private chat room-->
+          <div id="joinPrivate" title="Join Private Chatroom">
+            <h3>Join Private Room</h3>
+             <label>Room Name: <input id="changePrivRoom" type="text"> </label>
+             <br><br>
+             <label>Password: <input id="roomPassword" type="password"> </label>
+             <br><br>
+             <button id="joinPrivateRoom">Join Private Room</button>
+          </div>
+
+      </div>
+
+      <!-- section for kicking and banning users -->
+      <div id="admin" style="display:none;position:absolute;top:470px;left:800px;background-color:white;">
+        <input type="hidden" value="" id="victim">
+        <input type="text" id="content"><br>
+        <button id="pmessage">Message</button>
+        <button id="kick">Kick Out</button>
+        <button id="ban">Ban User</button>
+      </div>
+
+      <!-- section where activity will be displayed -->
+      <div class="col-md-6" id="activity" style="display:none;">
+
+            <!--this is where current users will be listed-->
+            <div id="currentUsers" style="position:absolute;top:140px;left:800px;background-color:white;width:200px;overflow-y:scroll;height:300px;">All chatters:<br></div>
+            <!--this is where chats will be posted-->
+            <div id="chatlog" style="position:absolute;top:140px;left:400px;background-color:white;width:300px;overflow-y:scroll;height:300px;">Messages:<br></div>
+
+            <div class="msg" id="msg" style="display:none;position:absolute;top:470px;left:400px;">
+              <h3>Messaging</h3>
+              <!-- <label>Enter Nickname: <input type="text" id="nickname"/> </label>
+              <br><br> -->
+                   <label><br><input style="width:300px;height:100px;" type="text" id="message_input"/> <br></label>
+                   <button id="sendmessage"> send</button>
+                   <!-- <button onclick="sendPrivate()">send private</button> -->
+              </div>
+
+      </div>
+</div>
+
+
+<!-- socketio section -->
+
+<script type ="text/javascript">
+//connect to server
+var socketio = io.connect();
+var user;
+//receive message from server
+
+socketio.on("loggedin",function(data) {
+  if (data["loggedin"] == true) {
+
+    $("#initialScreen").hide();
+    $("#userOptions").show();
+    $("#activity").show();
+    $("#msg").show();
+  }
+});
+
+socketio.on("message_to_client",function(data) {
+    var msg;
+
+    if (data['private'] != null && data['private'] == true){
+
+       msg ="<p style=\"color:red;\">" + data['message']+ "</p>";
+       document.getElementById("chatlog").innerHTML = document.getElementById("chatlog").innerHTML + msg;
+    }else{
+      document.getElementById("chatlog").appendChild(document.createTextNode(data['message']));
+      document.getElementById("chatlog").innerHTML = document.getElementById("chatlog").innerHTML + "<br>";
+    }
+
+});
+
+
+socketio.on("update_member",function(data) {
+  document.getElementById("currentUsers").innerHTML = "All users in the room:  <br>";
+  var members = JSON.parse(data);
+  for (var key in members){
+    var instance = members[key];
+
+    instance = "<a id="+members[key]+" name=\"user\" href=\"javascript:admin("+ members[key] + ");\">" + instance + "</a>";
+    document.getElementById("currentUsers").innerHTML = document.getElementById("currentUsers").innerHTML + instance + "<br>";
+
+  }
+
+});
+
+//gets list of all public rooms and displays on join room dialog
+socketio.on("get_rooms",function(data){
+   document.getElementById("Rooms").appendChild(document.createTextNode(data["roomname"]));
+   document.getElementById("Rooms").appendChild(document.createElement("br"));
+});
+
+socketio.on("new", function(data){
+  if(data["success"] == false){
+    alert(data["message"]);
+  }
+  else if (data["success"] == true){
+    alert(data["message"]);
+  }
+});
+
+//join
+socketio.on("join", function(data){
+  if(data["success"] == false){
+    alert("fail" + data["message"]);
+  }
+  else if (data["success"] == true){
+    alert("success");
+  }
+});
+
+//kick or ban user
+socketio.on("kickorban", function(data){
+    alert(data["message"]);
+
+});
+
+//kick
+socketio.on("kick", function(data){
+  if(data["kicked"] == false){
+    alert(data["message"]);
+  }
+  else {
+    alert(data["message"]);
+  }
+});
+
+//update the roomname
+socketio.on("update_roomname",function(data){
+   document.getElementById("RoomName").innerHTML = "Chatroom: " + data["roomname"];
+   alert("Welcome to " + data["roomname"]);
+});
+
+function ban(){
+  var toban=document.getElementById("victim").value;
+  socketio.emit("ban", {ban:toban});
+}
+
+function kick(){
+  var tokick=document.getElementById("victim").value;
+  socketio.emit("kick", {tokickuser:tokick});
+}
+
+function pmessage(){
+  var pmsg=document.getElementById("content").value;
+  var victim=document.getElementById("victim").value;
+  socketio.emit("privatemessage",{to:victim,pmessage:pmsg})
+}
+
+
+//List of Functions
+
+
+//send a message
+function sendMessage(){
+   var msg = document.getElementById("message_input").value;
+   socketio.emit("message_to_server", {message:msg});
+}
+
+//need to add so can pick user to send message to / make text different color (blue)
+function sendPrivate(){
+   var pmsg = document.getElementById("message_input").value;
+   socketio.emit("message_to_server", {message:pmsg});
+   $("#message_input").val('');
+}
+
+//possibly need to adjust, here or on server side?
+function login(){
+   var user = document.getElementById("username").value;
+   socketio.emit("new_user", {username:user});
+      $("#initialScreen").dialog("close");
+      $("#userOptions").show();
+      $("#activity").show();
+}
+
+//creates a chat room
+//determines if user wishes to create public or private room
+function createRoom(){
+   if($("#privORpub").val() == "1"){
+      createPublic();
+   }else{
+      createPrivate();
+   }
+}
+
+//tells server to create public room
+function createPublic(){
+   var newRoom = $("#roomName").val();
+   socketio.emit("create", {public:true, name:newRoom});
+}
+
+//tells server to create private room
+function createPrivate(){
+   var newRoom = $("#roomName").val();
+   var password = $("#password").val();
+   socketio.emit("create", {public:false, name:newRoom, password:password});
+}
+
+//Should list available chat rooms, each with ability to join
+//opens join public room dialog
+function openJoin(){
+   document.getElementById("Rooms").innerHTML = '';
+   socketio.emit("send_rooms");
+   $("#joinChat").dialog("open");
+}
+
+//switches room to public room indicated
+function joinRoom(){
+   socketio.emit("join_public",{chatroom:$("#changeRoom").val()});
+   $("#joinChat").dialog("close");
+   isOwner();
+}
+
+//opens join private room dialog
+function openJoinPriv(){
+   $("#joinPrivate").dialog("open");
+}
+
+//switches room to private room indicated
+function joinPrivRoom(){
+   socketio.emit("join_private",{chatroom:$("#changePrivRoom").val(), password:$("#roomPassword").val()});
+   $("#joinPrivate").dialog("close");
+   isOwner();
+}
+
+//asks server is current user is owner of the server
+function isOwner(){
+   socketio.emit("checkOwner",{user:user});
+}
+
+
+//event listeners, onclick was acting buggy
+
+document.getElementById("login").addEventListener("click",login);
+document.getElementById("createRoom").addEventListener("click",createRoom);
+document.getElementById("sendmessage").addEventListener("click",sendMessage);
+document.getElementById("joinPrivateRoom").addEventListener("click",joinPrivRoom);
+document.getElementById("kick").addEventListener("click",kick);
+document.getElementById("ban").addEventListener("click",ban);
+document.getElementById("pmessage").addEventListener("click",pmessage);
+
+</script>
+   </body>
+</html>

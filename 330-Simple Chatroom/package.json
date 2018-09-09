@@ -1,0 +1,19 @@
+{
+  "name": "adrien",
+  "version": "1.0.0",
+  "description": "m6",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrien Xie",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "None"
+  },
+  "keywords": [
+    "Module",
+    "6"
+  ]
+}
